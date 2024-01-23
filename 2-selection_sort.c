@@ -24,7 +24,7 @@ void selection_sort(int *array, size_t size)
 		}
 		if (array[i] > array[k])
 		{
-			temp = array[i];
+			swap = array[i];
 			array[i] = array[k];
 			array[k] = swap;
 			print_array(array, size);
