@@ -17,6 +17,7 @@ void swap(listint_t *a, listint_t *b)
 	a->prev = b;
 	b->next = a;
 }
+
 /**
  * insertion_sort_list - Insert the sorts in double list.
  * @list: pointer to head.
