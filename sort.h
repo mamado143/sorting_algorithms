@@ -22,9 +22,12 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 /**Helper functions**/
 void swap(listint_t *a, listint_t *b);
+void SWAP(int *array, size_t size, int *a, int *b);
+size_t lomuto_partition(int *array, size_t size, ssize_t left, ssize_t right);
 /** prototypes of the functions **/
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
+void fast_sort(int *array, size_t size, ssize_t left, ssize_t right);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 #endif /*_SORTING_H*/

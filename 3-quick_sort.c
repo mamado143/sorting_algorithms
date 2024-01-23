@@ -8,14 +8,15 @@
  *
  * Return: returns void.
  */
-void swap(int *array, size_t size, int *a, int *b)
+void SWAP(int *array, size_t size, int *a, int *b)
 {
 	if (*a != *b)
 	{
 		*a = *a + *b;
 		*b = *a - *b;
 		*a = *a - *b;
-		print_array((const int *)array, size)
+		print_array((const int *)array, size);
+	}
 }
 /**
  * lomuto_partition - function order a subset of an array of integers according.
@@ -29,10 +30,10 @@ size_t lomuto_partition(int *array, size_t size, ssize_t left, ssize_t right)
 {
 	int i, j, pivot = array[right];
 
-	for (i = j = left; j < high; j++)
+	for (i = j = left; j < right; j++)
 		if (array[j] < pivot)
-			swap(array, size, &array[j], &array[i++]);
-	swap(array, size, &array[i], &array[right]);
+			SWAP(array, size, &array[j], &array[i++]);
+	SWAP(array, size, &array[i], &array[right]);
 	return (i);
 }
 /**
@@ -50,7 +51,7 @@ void fast_sort(int *array, size_t size, ssize_t left, ssize_t right)
 		size_t part;
 
 		part = lomuto_partition(array, size, left, right);
-		fast_sort(array, size, left, p - 1);
+		fast_sort(array, size, left, part - 1);
 		fast_sort(array, size, part + 1, right);
 	}
 }
