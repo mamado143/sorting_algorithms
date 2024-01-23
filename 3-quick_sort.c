@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
- * swap - swaps 2 integers.
+ * SWAP - swaps 2 integers.
  * @array: sorting integers array.
  * @size: The size of the array.
  * @a: First value.
@@ -19,7 +19,7 @@ void SWAP(int *array, size_t size, int *a, int *b)
 	}
 }
 /**
- * lomuto_partition - function order a subset of an array of integers according.
+ * lomuto_partition - function order a subset of an array of integers.
  * @array: The array of integers.
  * @size: The size of the array.
  * @left: The starting index.
@@ -40,7 +40,7 @@ size_t lomuto_partition(int *array, size_t size, ssize_t left, ssize_t right)
  * fast_sort - sorting via partition.
  * @array: An array of ints.
  * @size: The size of the array.
- * @lift: the left index.
+ * @left: the left index.
  * @right: the right index.
  * * Return: void.
  */
