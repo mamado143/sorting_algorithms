@@ -25,4 +25,5 @@ void swap(listint_t *a, listint_t *b);
 /** prototypes of the functions **/
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
+void selection_sort(int *array, size_t size);
 #endif /*_SORTING_H*/
